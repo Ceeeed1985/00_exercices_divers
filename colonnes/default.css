@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+  
+
+body h1 {
+    font-size: 2em;
+    color: black;
+}
+
+#containeur {
+    width: 100%;
+}
+
+#colonne01 {
+    background-color:red;
+    font-size: 1.5em;
+    color: white;
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 15px;
+}
+
+#colonne02 {
+    background-color:blue;
+    font-size: 1.5em;
+    color: white;
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 15px;
+
+}
+
+#colonne03 {
+    background-color:green;
+    font-size: 1.5em;
+    color: white;
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 15px;
+}
