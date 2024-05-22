@@ -19,7 +19,6 @@ body h1 {
     width: 25%;
     float: left;
     text-align: center;
-    padding: 15px;
 }
 
 #colonne02 {
@@ -29,8 +28,6 @@ body h1 {
     width: 50%;
     float: left;
     text-align: center;
-    padding: 15px;
-
 }
 
 #colonne03 {
@@ -40,5 +37,4 @@ body h1 {
     width: 25%;
     float: left;
     text-align: center;
-    padding: 15px;
 }
