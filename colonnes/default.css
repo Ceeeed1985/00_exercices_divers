@@ -9,15 +9,14 @@ body h1 {
 }
 
 #containeur {
-    width: 100%;
+    display: flex;
 }
 
 #colonne01 {
     background-color:red;
     font-size: 1.5em;
     color: white;
-    width: 25%;
-    float: left;
+    /* width: 25%; */
     text-align: center;
 }
 
@@ -25,16 +24,23 @@ body h1 {
     background-color:blue;
     font-size: 1.5em;
     color: white;
-    width: 50%;
-    float: left;
+    /* width: 50%; */
     text-align: center;
+    flex: 1;
 }
 
 #colonne03 {
     background-color:green;
     font-size: 1.5em;
     color: white;
-    width: 25%;
-    float: left;
+    /* width: 25%; */
+    text-align: center;
+}
+
+#colonne04 {
+    background-color: purple;
+    font-size: 1.5em;
+    color: white;
+    /* width: 25%; */
     text-align: center;
 }
