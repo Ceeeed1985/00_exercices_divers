@@ -14,4 +14,8 @@ echo $duvel->getBarName() . "<br>";
 // echo $beer->getBarName();
 
 $beverage = new Beverage('noir', 2, 'cold');
-echo $beverage->getBarNameBeverage();
+echo $beverage->getBarNameBeverage() . "<br>";
+
+echo $duvel->getAdress() . "<br>";
+
+echo Beer::getAdress();
