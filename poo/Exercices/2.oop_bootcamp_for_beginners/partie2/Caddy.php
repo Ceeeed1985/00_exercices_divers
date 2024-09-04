@@ -1,23 +1,21 @@
 <?php
 
 class Caddy {
-    protected int $quantity;
-    protected float $unitPrice;
 
+    private array $items = [];
 
-    public function __construct(int $quantity, float $unitPrice){
-        $this->quantity = $quantity;
-        $this->unitPrice = $unitPrice;
+    public function addItem(Caddy $item):void
+    {
+        $this->items[] = $item;
     }
 
-    public function getQuantity(): int
+    public function getTotalCost():float
     {
-        return $this->quantity;
-    }
-
-    public function getUnitPrice(): float
-    {
-        return $this->unitPrice;
+        $totalCost = 0;
+        foreach ($this->items as $item) {
+            $totalCost += $item->getUnitPrice()*$item->getQuantity();
+        }
+        return $totalCost;
     }
 
     

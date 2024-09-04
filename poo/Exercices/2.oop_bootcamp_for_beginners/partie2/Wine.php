@@ -4,12 +4,15 @@ class Wine extends Caddy
 {
     private string $wineName;
     private float $wineTVA;
+    private int $quantity;
+    private float $unitPrice;
 
-    public function __construct (string $wineName, int $quantity, float $unitPrice, float $fruitsTVA = 0.21)
+    public function __construct (string $wineName, int $quantity, float $unitPrice, float $wineTVA = 0.21)
     {
-        parent::__construct($quantity, $unitPrice);
+        $this->quantity = $quantity;
+        $this->unitPrice = $unitPrice;
         $this->wineName = $wineName;
-        // $this->fruitTVA = $fruitTVA;
+        $this->wineTVA = $wineTVA;
     }
 
     public function setWine(): string
@@ -22,9 +25,26 @@ class Wine extends Caddy
         return $this->wineName;
     }
 
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
+
+    public function getUnitPrice(): float
+    {
+        return $this->unitPrice;
+    }
+
     public function getPriceWine():string
     {
-        return $this->wineName . " : " . $this->unitPrice*$this->quantity;
+        $totalPriceHTVA = $this->unitPrice*$this->quantity;
+        $totalPriceTVAC = $totalPriceHTVA + ($totalPriceHTVA * $this->wineTVA);
+        $totalTVA = $totalPriceTVAC - $totalPriceHTVA;
+        return $this->wineName . " : "
+        . $totalPriceHTVA . " Euros HTVA | "
+        . $this->quantity . " unité(s) | "
+        . "TVA : " . $this->wineTVA*100 . "% | "
+        . $totalPriceTVAC . " Euros TVAC.";
     }
 
 

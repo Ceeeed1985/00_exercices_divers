@@ -4,14 +4,20 @@ include_once('Caddy.php');
 include_once('Fruits.php');
 include_once('Wine.php');
 
+$caddy1 = new Caddy();
+
 $banane = new Fruits('Banane', 3, 2.5);
-echo $banane->getFruit() . "<br>";
-echo $banane->getPriceFruit() . "<br>";
-
 $pomme = new Fruits('Pomme', 5, 1.4);
-echo $pomme->getFruit() . "<br>";
-echo $pomme->getPriceFruit() . "<br>";
-
 $bordeaux = new Wine('Bordeaux', 2, 12.99);
-echo $bordeaux->getWine() . "<br>";
+
+$caddy1->addItem($banane);
+$caddy1->addItem($pomme);
+$caddy1->addItem($bordeaux);
+
+// Affichage des détails des articles
+echo $banane->getPriceFruit() . "<br>";
+echo $pomme->getPriceFruit() . "<br>";
 echo $bordeaux->getPriceWine() . "<br>";
+
+// Calcul et affichage du coût total du caddy
+echo "<br>Prix total: " . $caddy1->getTotalCost() . "€<br>";
