@@ -30,6 +30,11 @@ class Fruits extends Caddy
         return $this->quantity;
     }
 
+    public function getTVA(): float
+    {
+        return $this->fruitsTVA;
+    }
+
     public function getUnitPrice(): float
     {
         return $this->unitPrice;
@@ -40,6 +45,7 @@ class Fruits extends Caddy
         $totalPriceHTVA = $this->unitPrice*$this->quantity;
         $totalPriceTVAC = $totalPriceHTVA + ($totalPriceHTVA * $this->fruitsTVA);
         $totalTVA = $totalPriceTVAC - $totalPriceHTVA;
+        
         return $this->fruit . " : "
         . $totalPriceHTVA . " Euros HTVA | "
         . $this->quantity . " unité(s) | "

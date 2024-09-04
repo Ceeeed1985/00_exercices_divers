@@ -20,4 +20,5 @@ echo $pomme->getPriceFruit() . "<br>";
 echo $bordeaux->getPriceWine() . "<br>";
 
 // Calcul et affichage du coût total du caddy
-echo "<br>Prix total: " . $caddy1->getTotalCost() . "€<br>";
+echo "<br>" . $caddy1->getTotalCostHTVA() . " Euros HTVA | " . $caddy1->getTotalQuantity() . " produits <br>";
+echo "<b>Prix Total : " . $caddy1->getTotalCostTVAC() . " EurosTVAC<b>";

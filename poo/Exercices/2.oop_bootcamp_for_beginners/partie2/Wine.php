@@ -30,6 +30,11 @@ class Wine extends Caddy
         return $this->quantity;
     }
 
+    public function getTVA(): float
+    {
+        return $this->wineTVA;
+    }
+
     public function getUnitPrice(): float
     {
         return $this->unitPrice;
