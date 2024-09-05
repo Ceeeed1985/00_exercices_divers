@@ -68,6 +68,10 @@ class Groups
 
     }
 
-    //Afficher les moyennes
+    public function moveStudent(Students $student, Groups $toGroup):void
+    {
+        
+
+    }
 
 }
