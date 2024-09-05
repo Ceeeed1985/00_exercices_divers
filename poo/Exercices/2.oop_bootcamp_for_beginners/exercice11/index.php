@@ -32,3 +32,11 @@ $studentsListGroup2 = $group2->getStudentsList();
 foreach ($studentsListGroup2 as $student) {
     echo "<br><b>" . $student['name'] . " :</b> " . $student['score'] . "<br>";
 }
+
+
+echo $group1->getCountStudent() . "<br>";
+echo $group1->countTotalScore() . "<br>";
+echo $group1->getAverageGroup() . "<br>";
+echo $group2->getCountStudent() . "<br>";
+echo $group2->countTotalScore() . "<br>";
+echo $group2->getAverageGroup() . "<br>";
