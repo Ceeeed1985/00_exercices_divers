@@ -11,7 +11,7 @@ class Utilisateur
     private string $email;
 
     //on peut ensuite ajouter des méthodes
-    private function seConnecter(){
+    public function seConnecter(){
         echo "Je suis inscrit sur votre site web, je peux donc me connecter";
     }
 
@@ -19,24 +19,52 @@ class Utilisateur
         echo "J'ai le droit de me déconnecter à tout moment";
     }
 
-    public function initialiserNom($nom){
+
+    //setters pour mettre à jour l'attribut "nom"
+    public function setNom($nom)
+    {
         $this->nom = $nom;
     }
 
-    public function recupererNom(){
-        echo "Nom : " . $this->nom;
-    }
-
-    public function initialiser($nom, $prenom, $age, $email){
-        $this->nom = $nom;
+    public function setPrenom($prenom)
+    {
         $this->prenom = $prenom;
-        $this->age = $age;
+    }
+
+    public function setAge($age)
+    {
+        if($age > 120 || $age < 1){
+            throw new Exception ("L'âge doit être compris entre 1 et 120.");
+        } else {
+            $this->age = $age;
+
+        }
+    }
+
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function recupererInfosUser(){
-        return "$this->nom, $this->prenom, $this->age, $this->email";
+    //Getters pour récupérer les valeurs des attributs
+    public function getNom()
+    {
+        return $this->nom;
     }
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+    public function getAge()
+    {
+        return $this->age;
+    }
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+
 }
 
 
