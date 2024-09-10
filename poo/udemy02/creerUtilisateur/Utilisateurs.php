@@ -10,6 +10,13 @@ class Utilisateur
     private int $age;
     private string $email;
 
+    public function __construct ($nom, $prenom, $email)
+    {
+        $this->setNom($nom);
+        $this->setPrenom($prenom);
+        $this->setEmail($email);
+    }
+
     //on peut ensuite ajouter des méthodes
     public function seConnecter(){
         echo "Je suis inscrit sur votre site web, je peux donc me connecter";
@@ -41,9 +48,14 @@ class Utilisateur
         }
     }
 
-    public function setEmail($email)
+    private function setEmail($email)
     {
-        $this->email = $email;
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $this->email = $email;
+        } else {
+            throw new Exception ("Attention email non valide");
+        }
+        
     }
 
     //Getters pour récupérer les valeurs des attributs
