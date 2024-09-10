@@ -10,6 +10,11 @@ class Utilisateur
     private int $age;
     private string $email;
 
+    private $note;
+
+    const NREF_BASSE = 10;
+    const NREF_HAUTE = 15;
+
     public function __construct ($nom, $prenom, $email)
     {
         $this->setNom($nom);
@@ -26,6 +31,16 @@ class Utilisateur
         echo "J'ai le droit de me déconnecter à tout moment";
     }
 
+    public function degreImplication(){
+        if ($this->getNote() >= self::NREF_HAUTE){
+            echo "Contribution de cet utilisateur est excellente !";
+        } elseif ($this->getNote() >= self::NREF_BASSE){
+            echo "Contribution moyenne";
+        } else {
+            echo "Contribution insuffisante !";
+        }
+    }
+
 
     //setters pour mettre à jour l'attribut "nom"
     public function setNom($nom)
@@ -36,6 +51,11 @@ class Utilisateur
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
+    }
+
+    public function setNote($note)
+    {
+        $this->note = $note;
     }
 
     public function setAge($age)
@@ -74,6 +94,10 @@ class Utilisateur
     public function getEmail()
     {
         return $this->email;
+    }
+    public function getNote()
+    {
+        return $this->note;
     }
 
 

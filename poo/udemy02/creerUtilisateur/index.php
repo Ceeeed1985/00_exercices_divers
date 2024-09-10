@@ -3,26 +3,38 @@
 require('Utilisateurs.php');
 require_once('Produits.php');
 
+$membre1 = new Utilisateur ("Jean", "Dupont", "jd@123.com");
+$membre1->setNote(8);
+echo $membre1->getNote();
+echo "<br>";
+echo $membre1->degreImplication();
 
-$membre1 =  new Utilisateur("Jean", "Durant", "abc@google.com");
-// var_dump($membre1);
-// $membre2 =  new Utilisateur();
-// $membre3 =  new Utilisateur();
-// $membre4 =  new Utilisateur();
 
-echo $membre1->getNom() . "<br>";
-echo $membre1->getPrenom() . "<br>";
-echo $membre1->getEmail() . "<br>";
 
-$produit1 = new Produit ("Electro", "Télévision", 600);
-// echo $produit1->getName();
-var_dump($produit1);
+
+//EXERCICES SUR LES GETTERS ET SETTERS + CONSTRUCTEURS + STATIC
+// $produit1 = new Produit ("Electro", "Télévision", 200);
+
+// // echo Produit::getRemise();
+// // echo "<br>";
+// // echo $produit1->getNewPrice();
+
 // echo "<br>";
-// echo Produit::$remise;
+// $produit1->setRemise(50);
+// echo Produit::getRemise();
 // echo "<br>";
-// echo $produit1::$remise;
+// echo $produit1->getNewPrice();
+// echo "<br><br>";
 
-echo $produit1::getRemise();
+// echo $produit1::getRemise();
+
+// echo "<br><br>";
+
+// $produit2 = new Produit ("Electro", "Laptop", 999);
+// var_dump($produit2);
+// echo "<br>" . $produit2::getRemise();
+// echo "<br>" . $produit2->getNewPrice();
+
 
 
 ?>

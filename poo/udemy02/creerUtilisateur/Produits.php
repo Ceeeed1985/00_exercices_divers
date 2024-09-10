@@ -31,6 +31,11 @@ class Produit
         $this->price = $price;
     }
 
+    public function setRemise($remise)
+    {
+        self::$remise = $remise;
+    }
+
     //Getters
 
     private function getReference()
