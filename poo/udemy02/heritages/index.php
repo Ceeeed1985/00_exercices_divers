@@ -15,3 +15,8 @@ echo $auteur1->seConnecter();
 $auteur1->afficherNom();
 echo "<br>";
 echo $auteur1->getNote();
+
+$utilisateur1 = new Utilisateurs("Bruel", "Patrick", "casserlavoix@reccord.com");
+var_dump($utilisateur1);
+echo "<br>";
+echo $utilisateur1->seConnecter();

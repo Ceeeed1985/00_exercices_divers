@@ -9,6 +9,7 @@ class Auteurs extends Utilisateurs
         Parent::__construct($nom, $prenom, $email);
         $this->setNote($note);
         $this->setAvis($avis);
+        $this->status = "Auteur";
     }
 
 
@@ -18,7 +19,7 @@ class Auteurs extends Utilisateurs
     }
 
     public function seConnecter(){
-        echo "<br><br>Je suis ".$this->nom. " auteur sur votre site web, je peux donc me connecter";
+        echo "<br><br>Je suis " . $this->nom . ", " . $this->status . " sur votre site web, je peux donc me connecter";
     }
 
     //SETTERS

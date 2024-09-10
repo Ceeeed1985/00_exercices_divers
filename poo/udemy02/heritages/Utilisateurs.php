@@ -9,6 +9,7 @@ class Utilisateurs
     protected string $prenom;
     protected int $age;
     protected string $email;
+    protected string $status;
 
     const NREF_BASSE = 10;
     const NREF_HAUTE = 15;
@@ -18,11 +19,12 @@ class Utilisateurs
         $this->setNom($nom);
         $this->setPrenom($prenom);
         $this->setEmail($email);
+        $this->status = "Utilisateur";
     }
 
     //on peut ensuite ajouter des méthodes
     public function seConnecter(){
-        echo "Je suis inscrit sur votre site web, je peux donc me connecter";
+        echo "<br><br>Je suis " . $this->nom . ", " . $this->status . " sur votre site web, je peux donc me connecter";
     }
 
     public function seDeconnecter(){
