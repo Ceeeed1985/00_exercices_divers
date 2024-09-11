@@ -3,9 +3,13 @@
 class LanguageGame
 {
     private array $words;
+    private string $wordToFindFR;
+    private string $wordToFindEN;
 
-    public function __construct()
+    public function __construct(string $wordToFindFR, string $wordToFindEN)
     {
+        $this->wordToFindFR = $wordToFindFR;
+        $this->wordToFindEN = $wordToFindEN;
         // :: is used for static functions
         // They can be called without an instance of that class being created
         // and are used mostly for more *static* types of data (a fixed set of translations in this case)
