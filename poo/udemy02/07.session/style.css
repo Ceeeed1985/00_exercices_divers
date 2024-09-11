@@ -1,0 +1,38 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#212e53;
+    display: flex;
+    justify-content: center;
+    margin-top : 30px;
+    font-family: "poppins", sans-serif;
+}
+
+form{
+min-width: 500px;
+background-color: white;
+padding: 25px;
+border: 0px solid white;
+border-radius: 10px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input{
+    font-size: 1.2em;
+
+}
+
+.inputEmail{
+    width:100%;
+}
+.inputPassword{
+    width:100%;
+}
