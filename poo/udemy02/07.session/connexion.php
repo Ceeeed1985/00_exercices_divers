@@ -18,7 +18,7 @@
         <label for="password">Mot de passe : </label>
         <input class="inputPassword" type="password" id="password" name="password" required>
         <br><br>
-        <input type="submit" value="Se connecter" name="connexion">
+        <input class="connectButton" type="submit" value="Se connecter" name="connexion">
 
     </form>
     
