@@ -55,6 +55,22 @@ class Users
     }
 
 
+    //Méthode magique __toString()
+    //Elle va s'executer dès qu'on essaye de traiter un objet comme une chaine de caractères
+    public function __toString()
+    {
+        return "L'objet dont le nom est <strong>< " . $this->name . " ></strong> est un objet et non une chaine de caractère";
+    }
+
+
+    //Méthode magique __invoke()
+    //Elle va s'executer dès qu'on essaye d'utiliser un objet comme une fonction
+    public function __invoke($arg)
+    {
+        echo "Vous essayer d'utiliser l'objet dont le nom est <strong>< " . $this->name . " ></strong> comme une fonction
+        <br>Vous avez utilisé comme argument <strong>< " . $arg . " ></strong>";
+    }
+
 
     //Exercice 06 - boucle foreach - méthode pour afficher les infos d'un utilisateur 
 

@@ -39,3 +39,13 @@ echo '<br><br>';
 
 echo "<b>Exemple sur la magic method __unset() </b><br>";
 unset($user1->age);
+
+echo '<br><br>';
+
+echo "<b>Exemple sur la magic method __toString() </b><br>";
+echo $user1;
+
+echo '<br><br>';
+
+echo "<b>Exemple sur la magic method __invoke() </b><br>";
+$user1(43);
